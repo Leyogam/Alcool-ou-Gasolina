@@ -26,7 +26,7 @@
         android:id="@+id/textView"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="Melhor opção para abastecimento!"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -37,6 +37,7 @@
         app:textAllCaps="false" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -48,14 +49,57 @@
         app:layout_constraintVertical_bias="0.0">
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/editAlcool"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Preço Álcool. Ex. R$ 1.90"
+            android:hint="Preço Álcool. Ex. 1.90"
             android:inputType="numberDecimal"
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+
+        <EditText
+            android:id="@+id/editGasolina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Preço Gasolina. Ex. 2.90"
+            android:inputType="numberDecimal"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:text="RESULTADO"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:drawableTint="#BA2121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
